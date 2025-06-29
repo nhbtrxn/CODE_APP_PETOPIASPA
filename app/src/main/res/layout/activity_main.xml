@@ -1,141 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity"
-    android:padding="10dp"
     android:background="@color/white">
 
-    <ImageButton
-        android:id="@+id/imvProfile"
-        android:src="@drawable/profile"
-        android:scaleType="centerCrop"
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/white"/>
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:padding="10dp">
 
-    <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+<!--            Thanh tim kiem-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="#4f2b1a"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/search_box_background"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:layout_margin="5dp">
+
+                    <EditText
+                        android:id="@+id/edtSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="Tìm kiếm sản phẩm/dịch vụ"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:paddingStart="8dp"
+                        android:inputType="text" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_search_grey" />
+
+                </LinearLayout>
+
+                <!-- Icon giỏ hàng -->
+                <ImageButton
+                    android:id="@+id/imbCart"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_cart_white"
+                    android:background="@null"
+                    android:contentDescription="Giỏ hàng"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="8dp" />
+
+                <!-- Icon thông báo -->
+                <ImageButton
+                    android:id="@+id/imbBell"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_bell"
+                    android:background="@null"
+                    android:contentDescription="Thông báo"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:tint="@color/white"/>
+
+            </LinearLayout>
+
+<!--            Profile-->
+            <ImageButton
+                android:id="@+id/imbProfile"
+                android:src="@drawable/profile"
+                android:scaleType="fitCenter"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Danh mục"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:layout_marginTop="10dp">
+
+                <!-- Hàng 1:-->
+                <TableRow android:gravity="center">
+                    <ImageButton
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/shopping_u"
+                        android:background="@null"
+                        android:scaleType="fitCenter"/>
+                    <ImageButton
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/calendar_u"
+                        android:background="@null"
+                        android:scaleType="fitCenter"/>
+                    <ImageButton
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ar_u"
+                        android:background="@null"
+                        android:scaleType="fitCenter"/>
+                    <ImageButton
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/emotion_u"
+                        android:background="@null"
+                        android:scaleType="fitCenter"/>
+                </TableRow>
+
+                <!-- Hàng 2: -->
+                <TableRow android:gravity="center">
+                    <ImageButton
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/petstar_u"
+                        android:background="@null"
+                        android:scaleType="fitCenter"/>
+                    <ImageButton
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/contact_u"
+                        android:background="@null"
+                        android:scaleType="fitCenter"/>
+                    <ImageButton
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/asking_u"
+                        android:background="@null"
+                        android:scaleType="fitCenter"/>
+                    <ImageButton
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/game_u"
+                        android:background="@null"
+                        android:scaleType="fitCenter"/>
+                </TableRow>
+
+                <!-- Hàng 3: -->
+                <TableRow android:gravity="start">
+                    <ImageButton
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/emergency_u"
+                        android:background="@null"
+                        android:scaleType="fitCenter"/>
+                    <ImageButton
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/policy_u"
+                        android:background="@null"
+                        android:scaleType="fitCenter"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Có thể bạn quan tâm"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+<!--            Slider-->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dịch vụ nổi bật, giảm giá"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sản phẩm nổi bật"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Danh mục"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stretchColumns="*"
-        android:layout_marginTop="10dp">
-
-        <!-- Hàng 1:-->
-        <TableRow android:gravity="center">
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/shopping_u"
-                android:background="@null"
-                android:scaleType="fitCenter"/>
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/calendar_u"
-                android:background="@null"
-                android:scaleType="fitCenter"/>
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/ar_u"
-                android:background="@null"
-                android:scaleType="fitCenter"/>
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/emotion_u"
-                android:background="@null"
-                android:scaleType="fitCenter"/>
-        </TableRow>
-
-        <!-- Hàng 2: -->
-        <TableRow android:gravity="center">
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/petstar_u"
-                android:background="@null"
-                android:scaleType="fitCenter"/>
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/contact_u"
-                android:background="@null"
-                android:scaleType="fitCenter"/>
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/asking_u"
-                android:background="@null"
-                android:scaleType="fitCenter"/>
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/game_u"
-                android:background="@null"
-                android:scaleType="fitCenter"/>
-        </TableRow>
-
-        <!-- Hàng 3: -->
-        <TableRow android:gravity="start">
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/emergency_u"
-                android:background="@null"
-                android:scaleType="fitCenter"/>
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/policy_u"
-                android:background="@null"
-                android:scaleType="fitCenter"/>
-        </TableRow>
-
-    </TableLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Có thể bạn quan tâm"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginBottom="10dp" />
-
-    <!-- TabLayout để làm dấu chấm -->
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabIndicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        app:tabIndicatorColor="@android:color/black"
-        app:tabIndicatorHeight="0dp"
-        app:tabSelectedTextColor="@android:color/black"
-        app:tabBackground="@drawable/tab_selector"
-        app:tabGravity="center"
-        app:tabIndicator="@null"
-        app:tabMode="fixed" />
-
-
-
-</LinearLayout>
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:background="#4f2b1a"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/white"
+        app:itemBackground="@null"/>
+</RelativeLayout>
