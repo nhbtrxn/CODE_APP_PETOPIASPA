@@ -1,5 +1,6 @@
 package com.nhom9.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -29,6 +30,24 @@ public class MainActivity extends AppCompatActivity {
 
         SliderAdapter adapter = new SliderAdapter(this, imageList);
         binding.viewPager.setAdapter(adapter);
+
+        // Xử lý khi nhấn vào nút Chính sách
+        binding.btnPolicy.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, PolicyActivity.class);
+            startActivity(intent);
+        });
+
+        // Xử lý khi nhấn vào nút Liên hệ
+        binding.btnContact.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, ContactActivity.class);
+            startActivity(intent);
+        });
+
+        // Xử lý khi nhấn vào nút hỏi đáp
+        binding.btnAsking.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, QaAActivity.class);
+            startActivity(intent);
+        });
 
 //        // Gắn tab indicator
 //        new TabLayoutMediator(binding.tabIndicator, binding.viewPager,
