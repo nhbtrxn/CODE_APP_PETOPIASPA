@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutPolicy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".PolicyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+
+            android:paddingBottom="10dp"
+            android:background="#4F2B1A"
+            android:gravity="bottom">
+
+            <ImageView
+                android:id="@+id/imvBack"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/icon_policy_back"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="CHÍNH SÁCH VÀ QUYỀN RIÊNG TƯ"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- LOGO -->
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo_policy" />
+
+        <!-- NỘI DUNG MẶC ĐỊNH -->
+        <LinearLayout
+            android:id="@+id/defaultContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="271dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="13dp"
+                android:text="CHÍNH SÁCH QUYỀN RIÊNG TƯ\nPETOPIA SPA"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cập nhật lần cuối: 24/05/2025"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chính sách này mô tả cách Petopia Spa thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn khi sử dụng ứng dụng. Việc bạn tiếp tục sử dụng ứng dụng đồng nghĩa với việc bạn đồng ý với các điều khoản trong chính sách này."
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:justificationMode="inter_word" />
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Về cốt lõi, chính sách quyền riêng tư nhằm hoàn thành bốn vai trò:"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:justificationMode="inter_word" />
+
+            <!-- Danh sách các vai trò -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Thông báo cho người dùng về việc thu thập và sử dụng dữ liệu riêng tư."
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"
+                android:justificationMode="inter_word" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Cung cấp cho người dùng lựa chọn từ chối thu thập dữ liệu."
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"
+                android:justificationMode="inter_word" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Cung cấp cho người dùng quyền truy cập vào dữ liệu được thu thập hoặc tranh cãi về độ chính xác của dữ liệu đó."
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"
+                android:justificationMode="inter_word" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Đảm bảo với người dùng rằng dữ liệu của họ được an toàn."
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"
+                android:justificationMode="inter_word"
+                android:layout_marginBottom="30dp"/>
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/listButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:background="@drawable/border_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="19.2dp"
+                    android:layout_height="19.2dp"
+                    android:src="@drawable/icon_policy_info" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Thông tin chúng tôi thu thập"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imvInfor"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_policy_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/border_background"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="19.2dp"
+                    android:layout_height="19.2dp"
+                    android:src="@drawable/icon_policy_purpose" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+
+                    android:text="Mục đích sử dụng thông tin"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imvPurpose"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_policy_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/border_background"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="19.2dp"
+                    android:layout_height="19.2dp"
+                    android:src="@drawable/icon_policy_share" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Chia sẻ thông tin"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imvShare"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_policy_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/border_background"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="19.2dp"
+                    android:layout_height="19.2dp"
+                    android:src="@drawable/icon_policy_store" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Lưu trữ và bảo mật"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imvStore"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_policy_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/border_background"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="19.2dp"
+                    android:layout_height="19.2dp"
+                    android:src="@drawable/icon_policy_rights" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Quyền của bạn"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imvRights"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_policy_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/item_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/border_background">
+
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="19.2dp"
+                    android:layout_height="19.2dp"
+                    android:src="@drawable/icon_policy_child" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Dành cho trẻ em"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imvChild"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_policy_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/border_background">
+
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="19.2dp"
+                    android:layout_height="19.2dp"
+                    android:src="@drawable/icon_policy_update"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Cập nhật chính sách"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imvUpdate"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_policy_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/border_background">
+
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="19.2dp"
+                    android:layout_height="19.2dp"
+                    android:src="@drawable/icon_policy_contact" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Liên hệ"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imvContact"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_policy_arrow"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

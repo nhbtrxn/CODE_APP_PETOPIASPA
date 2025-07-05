@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nhom9.fragment.StorageFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="13dp"
+        android:text="LƯU TRỮ VÀ BẢO MẬT"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật lần cuối: 24/05/2025"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Dữ liệu cá nhân được lưu trữ an toàn và chỉ giữ lại trong thời gian cần thiết."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:justificationMode="inter_word"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Chúng tôi luôn nỗ lực áp dụng các biện pháp kỹ thuật và tổ chức hợp lý nhất để bảo vệ thông tin cá nhân của bạn. Tuy nhiên, do đặc thù của môi trường Internet, chúng tôi không thể cam kết rằng dữ liệu sẽ luôn tuyệt đối an toàn trong mọi trường hợp."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:justificationMode="inter_word"
+        android:layout_marginBottom="5dp"/>
+
+</LinearLayout>

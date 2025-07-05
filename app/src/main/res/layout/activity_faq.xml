@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:background="#4F2B1A"
+            android:gravity="bottom">
+
+            <ImageView
+                android:id="@+id/imvBack"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/icon_policy_back"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:layout_marginLeft="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:text="CÂU HỎI THƯỜNG GẶP"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- LOGO -->
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo_policy" />
+
+        <!-- TIÊU ĐỀ GIỚI THIỆU -->
+        <TextView
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:text="GIỚI THIỆU VỀ PETOPIA SPA"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"/>
+
+
+            <!-- Câu hỏi 1 -->
+            <LinearLayout
+                android:id="@+id/question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/question_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Petopia Spa có những điểm gì nổi bật?"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:padding="4dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+
+                <TextView
+                    android:id="@+id/answer_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Petopia Spa là một trong những ứng dụng đầu tiên chuyên biệt cho spa thú cưng, tích hợp công nghệ AI và AR, quản lý hồ sơ thú cưng, đặt lịch trực tuyến tiện lợi – thay vì chỉ đặt qua mạng xã hội hoặc điện thoại như truyền thống."
+                    android:textSize="16sp"
+                    android:textColor="#B2B2B2"
+                    android:visibility="gone"
+                    android:padding="4dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <!-- Câu hỏi 2 -->
+            <LinearLayout
+                android:id="@+id/question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/question_text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Giờ làm việc của Petopia Spa là khi nào?"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:padding="4dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+
+                <TextView
+                    android:id="@+id/answer_text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chúng tôi mở cửa từ 8:00 – 20:00, tất cả các ngày trong tuần, kể cả cuối tuần và ngày lễ."
+                    android:textSize="16sp"
+                    android:textColor="#B2B2B2"
+                    android:visibility="gone"
+                    android:padding="4dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <!-- Câu hỏi 3 -->
+            <LinearLayout
+                android:id="@+id/question3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/question_text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Petopia Spa có nhận chăm sóc thú cưng qua đêm không?"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:padding="4dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+
+                <TextView
+                    android:id="@+id/answer_text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hiện tại, chúng tôi chưa hỗ trợ lưu trú qua đêm, nhưng có thể giữ thú cưng trong thời gian bạn sử dụng dịch vụ trong ngày."
+                    android:textSize="16sp"
+                    android:textColor="#B2B2B2"
+                    android:visibility="gone"
+                    android:padding="4dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+        <LinearLayout
+            android:id="@+id/question4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hướng dẫn tìm cửa hàng Petopia Spa?"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Để tìm Petopia Spa,  bạn hãy nhấp chuột vào “Tìm địa chỉ” để tìm kiếm"
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btnFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tìm địa chỉ"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:backgroundTint="#4F2B1A"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+            <!-- Tiêu đề Lịch hẹn và Dịch vụ -->
+        <TextView
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:text="LỊCH HẸN VÀ DỊCH VỤ"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"/>
+
+            <!-- Câu hỏi 5 -->
+        <LinearLayout
+            android:id="@+id/question5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tôi đặt lịch spa cho thú cưng như thế nào?"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chọn dịch vụ → Chọn thời gian → Nhập thông tin thú cưng → Xác nhận lịch → Nhận thông báo xác nhận qua app."
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <!-- Câu hỏi 6 -->
+        <LinearLayout
+            android:id="@+id/question6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tôi có thể đặt lịch trước bao lâu??"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bạn có thể đặt lịch trước từ 1 giờ đến 7 ngày, tùy theo lịch trống tại spa."
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <!-- Câu hỏi 7 -->
+        <LinearLayout
+            android:id="@+id/question7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Petopia có những dịch vụ nào cho thú cưng?"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gồm: tắm – gội, cắt tỉa lông, massage thư giãn, làm móng, vệ sinh tai/răng, xịt khử mùi, kiểm tra sức khỏe cơ bản."
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <!-- Câu hỏi 8 -->
+        <LinearLayout
+            android:id="@+id/question8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Có cần chuẩn bị gì khi đưa thú cưng đến spa?"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vui lòng đảm bảo thú cưng đã tiêm phòng đầy đủ, không có bệnh truyền nhiễm, và nên ăn nhẹ trước khi đến."
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+
+            <!-- Tiêu đề Sản phẩm và Mua sắm -->
+        <TextView
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:text="SẢN PHẨM VÀ MUA SẮM"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"/>
+
+        <!-- Câu hỏi 9 -->
+        <LinearLayout
+            android:id="@+id/question9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Petopia bán những loại sản phẩm nào?"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chúng tôi cung cấp: thức ăn, đồ chơi, quần áo, mỹ phẩm chăm sóc, vitamin, phụ kiện và nhiều sản phẩm cao cấp khác."
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <!-- Câu hỏi 10 -->
+        <LinearLayout
+            android:id="@+id/question10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tôi có thể mua hàng trực tiếp qua app không?"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bạn có thể xem mô tả, thêm vào giỏ hàng và thanh toán ngay trong app Petopia Spa."
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <!-- Câu hỏi 11 -->
+        <LinearLayout
+            android:id="@+id/question11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Có chương trình khuyến mãi hay giảm giá không?"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chúng tôi thường xuyên có voucher, combo dịch vụ + sản phẩm và ưu đãi riêng cho thành viên thân thiết."
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <!-- Tiêu đề GIÁ CẢ VÀ CHÍNH SÁCH-->
+        <TextView
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:text="GIÁ CẢ VÀ CHÍNH SÁCH"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"/>
+
+        <!-- Câu hỏi 12 -->
+        <LinearLayout
+            android:id="@+id/question12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dịch vụ spa có giá như thế nào?"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Giá tùy theo giống, kích thước và gói dịch vụ. Bạn có thể xem bảng giá chi tiết trong mục “Dịch vụ” của app."
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <!-- Câu hỏi 13 -->
+        <LinearLayout
+            android:id="@+id/question13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chính sách đổi trả sản phẩm như thế nào?"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chúng tôi hỗ trợ đổi trả trong 7 ngày với sản phẩm lỗi, giao nhầm, còn nguyên tem/mác và chưa sử dụng."
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <!-- Câu hỏi 14 -->
+        <LinearLayout
+            android:id="@+id/question14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tôi có thể hủy lịch hẹn không?"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bạn có thể hủy hoặc thay đổi lịch ít nhất 3 giờ trước thời gian hẹn ngay trên ứng dụng."
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+        <!-- Câu hỏi 15 -->
+        <LinearLayout
+            android:id="@+id/question15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/question_text15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Petopia Spa có chương trình thành viên không?"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/answer_text15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thành viên được tích điểm, nhận ưu đãi riêng và ưu tiên đặt lịch vào khung giờ cao điểm."
+                android:textSize="16sp"
+                android:textColor="#B2B2B2"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+
+        </LinearLayout>
+</ScrollView>

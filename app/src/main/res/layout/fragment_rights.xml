@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nhom9.fragment.RightsFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="13dp"
+        android:text="QUYỀN CỦA BẠN"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật lần cuối: 24/05/2025"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bạn có thể:"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:justificationMode="inter_word"
+        android:layout_marginBottom="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/AccountInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:justificationMode="inter_word"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ Liên hệ với chúng tôi nếu muốn xóa tài khoản hoặc có yêu cầu khác liên quan đến dữ liệu cá nhân."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="15dp"
+        android:justificationMode="inter_word"
+        android:layout_marginBottom="5dp"/>
+
+</LinearLayout>

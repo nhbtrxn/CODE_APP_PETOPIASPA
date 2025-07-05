@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nhom9.fragment.ShareInfoFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="13dp"
+        android:text="CHIA SẺ THÔNG TIN"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật lần cuối: 24/05/2025"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chúng tôi có thể chia sẽ thông tin của bản với:"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:justificationMode="inter_word"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ Đối tác dịch vụ: Để hỗ trợ vận hành ứng dụng."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="15dp"
+        android:justificationMode="inter_word"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ Đối tác kinh doanh: Để cung cấp ưu đãi, dịch vụ liên quan."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="15dp"
+        android:justificationMode="inter_word"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ Cơ quan pháp luật: Khi có yêu cầu hợp pháp."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="15dp"
+        android:justificationMode="inter_word"
+        android:layout_marginBottom="5dp"/>
+
+</LinearLayout>

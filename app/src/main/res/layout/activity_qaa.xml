@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:id="@+id/layoutQaA">
+
+  <!-- HEADER -->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:orientation="horizontal"
+      android:paddingBottom="10dp"
+      android:background="#4F2B1A"
+      android:gravity="bottom">
+
+    <ImageView
+        android:id="@+id/imvBack"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/icon_policy_back"
+        android:layout_marginLeft="15dp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Logo -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_qaa_logo" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+  </LinearLayout>
+
+  <!-- NỘI DUNG CHAT -->
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="25 thg 5"
+          android:textSize="20sp"
+          android:textColor="#000000"
+          android:padding="5dp"
+          android:layout_gravity="center"
+          android:backgroundTint="#D9D9D9"
+          android:background="@drawable/rounded_corners"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="end"
+          android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sốp ơi!!!!"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="#E3CCBD"
+            android:textColor="#000000"
+            android:elevation="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="4dp" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="start"
+          android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xin chào,\nCảm ơn bạn đã liên hệ với chúng tôi\nBạn đang cần tư vấn về sản phẩm nào ạ?"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="#D3D3D3"
+            android:textColor="#000000"
+            android:elevation="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="4dp" />
+      </LinearLayout>
+
+    </LinearLayout>
+  </ScrollView>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:background="#4F2B1A"
+      android:padding="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_qaa_fb"
+        android:text="Đánh giá mức độ hài lòng"
+        android:textColor="#000000"
+        android:background="@drawable/rounded_corners"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:drawablePadding="4dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#4F2B1A"
+        android:padding="8dp">
+
+      <ImageView
+          android:layout_width="31dp"
+          android:layout_height="31dp"
+          android:src="@drawable/icon_qaa_add"
+          android:layout_marginEnd="8dp"
+          />
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:background="@drawable/rounded_corners"
+          android:gravity="center_vertical"
+          android:padding="6dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Gửi tin nhắn ...."
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:background="@android:color/transparent" />
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/icon_qaa_smile"
+            android:layout_marginStart="6dp"/>
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+
+</LinearLayout>

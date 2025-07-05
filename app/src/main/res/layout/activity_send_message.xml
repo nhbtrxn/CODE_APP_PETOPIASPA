@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutSendMessage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SendMessageActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:background="#4F2B1A"
+        android:gravity="bottom">
+
+        <ImageView
+            android:id="@+id/imvBack"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/icon_policy_back"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:layout_marginLeft="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:text="GỬI TIN NHẮN CHO CHÚNG TÔI"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bạn có...?"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:paddingTop="15dp"
+        android:paddingBottom="8dp"
+        android:layout_marginLeft="15dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_contact_group"
+        android:layout_margin="15dp"/>
+
+
+    <!-- Form nhập thông tin -->
+    <EditText
+        android:id="@+id/edtFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners"
+        android:hint="Họ và tên"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners"
+        android:hint="Số điện thoại"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:inputType="phone"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/edtMessage"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners"
+        android:hint="Nội dung liên hệ"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:gravity="top"
+        android:textColor="#000000"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="HOÀN THÀNH"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:backgroundTint="#4F2B1A"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textStyle="bold"/>
+
+</LinearLayout>
