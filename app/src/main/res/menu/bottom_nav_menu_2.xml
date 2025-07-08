@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Cửa hàng" />
+
+    <item
+        android:id="@+id/nav_booking"
+        android:icon="@drawable/ic_phone"
+        android:title="Lịch hẹn" />
+
+    <item
+        android:id="@+id/nav_noti"
+        android:icon="@drawable/ic_user_white"
+        android:title="Thông báo" />
+    <item
+        android:id="@+id/nav_me"
+        android:icon="@drawable/ic_user_white"
+        android:title="Tôi" />
+</menu>
