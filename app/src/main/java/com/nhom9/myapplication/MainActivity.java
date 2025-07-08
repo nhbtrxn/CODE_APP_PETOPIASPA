@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        binding.btnShopping.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, BuyActivity.class);
+            startActivity(intent);
+        });
+
 //        // Gắn tab indicator
 //        new TabLayoutMediator(binding.tabIndicator, binding.viewPager,
 //                (tab, position) -> {

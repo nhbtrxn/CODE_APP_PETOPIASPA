@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:background="#4F2B1A"
+        android:layout_marginBottom="8dp">
+
+        <!-- Search box -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@drawable/search_box_background"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:elevation="2dp"
+            android:clipToPadding="false"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="Tìm kiếm sản phẩm/dịch vụ"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_search_grey"
+                android:contentDescription="Tìm kiếm"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Cart icon -->
+        <ImageButton
+            android:id="@+id/btnCart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/cart_icon"
+            android:background="@android:color/transparent"
+            android:contentDescription="Giỏ hàng"
+            android:scaleType="centerInside"
+            android:padding="6dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B68D5F"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnService"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_button_background"
+            android:textColor="@color/tab_text_color"
+            android:text="Dịch vụ"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnProduct"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_button_background"
+            android:textColor="@color/tab_text_color"
+            android:text="Sản phẩm"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:background="#4f2b1a"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_nav_menu_2"
+        app:itemIconTint="@color/white"
+        app:itemBackground="@null"/>
+</LinearLayout>
