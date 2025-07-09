@@ -2,6 +2,8 @@ package com.nhom9.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -54,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
 //                (tab, position) -> {
 //                }
 //        ).attach();
+        TextView tvUsernameGreeting = findViewById(R.id.tvUsernameGreeting);
+        String username = getIntent().getStringExtra("username");
+        if (username != null && !username.isEmpty()) {
+            tvUsernameGreeting.setText("Xin chào, " + username + "!");
+        } else {
+            tvUsernameGreeting.setVisibility(View.GONE); // Ẩn nếu không có username
+        }
+
 
     }
 }
