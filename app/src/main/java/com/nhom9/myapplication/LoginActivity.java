@@ -32,35 +32,34 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Chuyển sang trang đăng ký
         binding.linkRegister.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
         });
+
+        // Chuyển sang trang quên mật khẩu
         binding.forgotPassword.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(LoginActivity.this, ResetPasswordActivity.class));
         });
-
-
-
 
         // Ẩn lỗi ban đầu
         binding.tvErrorEmailPhone.setVisibility(View.GONE);
         binding.tvErrorPassword.setVisibility(View.GONE);
 
+        // Xử lý khi nhấn nút đăng nhập
         binding.btnLogin.setOnClickListener(v -> {
             String input = binding.emailPhoneInput.getText().toString().trim();
             String password = binding.passwordInput.getText().toString().trim();
             boolean isValid = true;
 
-            //  Kiểm tra frontend
+            // Kiểm tra input email hoặc SĐT
             if (input.isEmpty()) {
-                binding.tvErrorEmailPhone.setText("Hãy nhập thông tin Email hoặc SĐT.");
+                binding.tvErrorEmailPhone.setText("Hãy nhập Email hoặc SĐT.");
                 binding.tvErrorEmailPhone.setVisibility(View.VISIBLE);
                 binding.emailPhoneInput.setBackgroundResource(R.drawable.register_border_error);
                 isValid = false;
             } else if (!isValidEmailOrPhone(input)) {
-                binding.tvErrorEmailPhone.setText("Email hoặc số điện thoại không đúng!");
+                binding.tvErrorEmailPhone.setText("Email hoặc số điện thoại không hợp lệ!");
                 binding.tvErrorEmailPhone.setVisibility(View.VISIBLE);
                 binding.emailPhoneInput.setBackgroundResource(R.drawable.register_border_error);
                 isValid = false;
@@ -69,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                 binding.emailPhoneInput.setBackgroundResource(R.drawable.border_brown_white);
             }
 
+            // Kiểm tra mật khẩu
             if (password.isEmpty()) {
                 binding.tvErrorPassword.setText("Hãy nhập mật khẩu.");
                 binding.tvErrorPassword.setVisibility(View.VISIBLE);
@@ -81,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
 
             if (!isValid) return;
 
-            //  Gửi request lên server
+            // Gửi request login
             LoginRequest loginRequest = new LoginRequest(input, password);
             ApiService apiService = ApiClient.getClient().create(ApiService.class);
             Call<ResponseBody> call = apiService.login(loginRequest);
@@ -94,29 +94,33 @@ public class LoginActivity extends AppCompatActivity {
                                 response.body().string() : response.errorBody().string();
 
                         JSONObject json = new JSONObject(body);
-                        String message = json.optString("message", "Không rõ lỗi");
+                        String message = json.optString("message", "Có lỗi xảy ra");
 
                         if (response.isSuccessful()) {
                             JSONObject userJson = json.getJSONObject("user");
 
-                            // Ưu tiên username, nếu trống thì lấy phone
                             String username = userJson.optString("username", "");
-                            if (username.isEmpty()) {
-                                username = userJson.optString("phone", "Người dùng");
+                            String phone = userJson.optString("phone", "");
+
+                            // Nếu không có username thì dùng phone để hiển thị
+                            String displayName = !username.isEmpty() ? username : phone;
+
+                            // Lưu thông tin vào SharedPreferences nếu có
+                            if (!displayName.isEmpty()) {
+                                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putString("username", username);
+                                editor.putString("phone", phone);
+                                editor.apply();
                             }
-                            //  Lưu username vào SharedPreferences
-                            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putString("username", username);
-                            editor.apply();
 
                             // Chuyển sang MainActivity và truyền username
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            intent.putExtra("username", username);
+                            intent.putExtra("username", displayName);
                             startActivity(intent);
                             finish();
                         } else {
-                            //  Hiển thị lỗi ngay dưới ô nhập
+                            // Hiển thị lỗi cụ thể
                             if (message.toLowerCase().contains("mật khẩu")) {
                                 binding.tvErrorPassword.setText(message);
                                 binding.tvErrorPassword.setVisibility(View.VISIBLE);
@@ -143,7 +147,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    //  Check định dạng email hoặc SĐT Việt Nam
+    // Hàm kiểm tra định dạng email hoặc SĐT
     private boolean isValidEmailOrPhone(String input) {
         return Patterns.EMAIL_ADDRESS.matcher(input).matches() || input.matches("^0\\d{9}$");
     }

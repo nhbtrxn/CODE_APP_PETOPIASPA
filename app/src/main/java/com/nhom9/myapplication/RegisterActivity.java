@@ -100,11 +100,13 @@ public class RegisterActivity extends AppCompatActivity {
                             if (username == null || username.isEmpty()) {
                                 username = user.getPhone();
                             }
-                            // Lưu username vào SharedPreferences
+                            // Lưu username và phone vào SharedPreferences
                             SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
                             SharedPreferences.Editor editor = sharedPreferences.edit();
                             editor.putString("username", username);
+                            editor.putString("phone", user.getPhone()); //
                             editor.apply();
+
 
                             // Chuyển thẳng sang MainActivity và truyền username
                             Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
