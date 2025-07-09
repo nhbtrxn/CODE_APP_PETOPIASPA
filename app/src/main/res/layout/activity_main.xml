@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-<!--            Thanh tim kiem-->
+            <!--            Thanh tim kiem-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -83,7 +83,7 @@
 
             </LinearLayout>
 
-<!--            Profile-->
+            <!--            Profile-->
             <ImageButton
                 android:id="@+id/imbProfile"
                 android:src="@drawable/profile"
@@ -91,6 +91,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvUsernameGreeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xin chào, [username]!"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -194,7 +205,7 @@
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"/>
 
-<!--            Slider-->
+            <!--            Slider-->
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"

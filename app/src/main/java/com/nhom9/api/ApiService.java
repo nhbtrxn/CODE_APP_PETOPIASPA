@@ -1,10 +1,14 @@
 package com.nhom9.api;
 
+import com.nhom9.models.LoginRequest;
 import com.nhom9.models.Product;
 import com.nhom9.models.Service;
+import com.nhom9.models.User;
 
 import java.util.List;
+import java.util.Map;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
@@ -58,4 +62,21 @@ public interface ApiService {
     // DELETE - Xóa (Delete)
     @DELETE("services/{id}")
     Call<Void> deleteService(@Path("id") String id);
+
+    // REGISTER
+    @POST("users/register")
+    Call<User> register(@Body User user);
+    // LOGIN
+    @POST("users/login")
+    Call<ResponseBody> login(@Body LoginRequest request);
+    // RESET PASSWORD
+    @POST("/api/users/reset-password")
+    Call<ResponseBody> resetPassword(@Body Map<String, String> body);
+    // Gửi mã xác nhận
+    @POST("/users/send-otp")
+    Call<ResponseBody> sendOtp(@Body Map<String, String> body);
+
+    // Xác nhận OTP và đổi mật khẩu
+    @POST("/users/confirm-reset")
+    Call<ResponseBody> confirmResetPassword(@Body Map<String, String> body);
 }
