@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/start_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FFF3E9"
+    tools:context=".MeActivity"
+    android:padding="24dp">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/light_logo"
+        android:contentDescription="Petopia Logo"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xin chào!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#4F2B1A"
+        android:layout_marginBottom="32dp"
+        android:visibility="gone" />
+
+    <!-- Nút Đăng nhập -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Đăng nhập"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#4F2B1A"
+        android:background="@drawable/border_4f2b1a_e3ccbd"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Nút Đăng ký -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Đăng ký"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#4F2B1A"
+        android:background="@drawable/border_4f2b1a_e3ccbd"/>
+
+</LinearLayout>
