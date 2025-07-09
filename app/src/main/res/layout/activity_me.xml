@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/start_layout"
+    android:id="@+id/me_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -52,5 +52,17 @@
         android:textStyle="bold"
         android:textColor="#4F2B1A"
         android:background="@drawable/border_4f2b1a_e3ccbd"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Đăng xuất"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#4F2B1A"
+        android:background="@drawable/border_4f2b1a_e3ccbd"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"/>
+
 
 </LinearLayout>

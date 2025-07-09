@@ -26,6 +26,25 @@ public class MeActivity extends AppCompatActivity {
         String username = sharedPreferences.getString("username", null);
         String phone = sharedPreferences.getString("phone", null);
 
+        boolean isLoggedIn = (username != null && !username.isEmpty() && !username.equals("Người dùng"))
+                || (phone != null && !phone.isEmpty());
+
+        if (isLoggedIn) {
+            String displayName = (username != null && !username.isEmpty() && !username.equals("Người dùng"))
+                    ? username : phone;
+
+            binding.tvGreeting.setText("Xin chào, " + displayName + "!");
+            binding.tvGreeting.setVisibility(View.VISIBLE);
+            binding.btnLogin.setVisibility(View.GONE);
+            binding.btnRegister.setVisibility(View.GONE);
+        } else {
+            binding.tvGreeting.setVisibility(View.GONE);
+            binding.btnLogin.setVisibility(View.VISIBLE);
+            binding.btnRegister.setVisibility(View.VISIBLE);
+        }
+
+
+
         // Kiểm tra trạng thái đăng nhập
         if (username != null || phone != null) {
             // Ưu tiên username
@@ -34,6 +53,15 @@ public class MeActivity extends AppCompatActivity {
             // Hiển thị lời chào
             binding.tvGreeting.setText("Xin chào, " + displayName + "!");
             binding.tvGreeting.setVisibility(View.VISIBLE);
+            // Sau khi hiển thị lời chào:
+            binding.btnLogout.setVisibility(View.VISIBLE);
+            binding.btnLogout.setOnClickListener(v -> {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear(); // Xoá tất cả
+                editor.apply();
+                recreate(); // Tải lại activity
+            });
+
 
             // Ẩn nút Đăng nhập & Đăng ký
             binding.btnLogin.setVisibility(View.GONE);

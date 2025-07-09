@@ -65,43 +65,27 @@
                 android:layout_marginTop="8dp"
                 android:textColor="#000000"/>
         </LinearLayout>
+    </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/zoomOption"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioGroup
+            android:id="@+id/radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginStart="24dp">
+            android:padding="8dp">
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/icon_contact_zoom" /> <!-- Thay bằng drawable của Zoom -->
-
-            <TextView
-                android:textColor="#000000"
+            <RadioButton
+                android:id="@+id/radio_remember"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Zoom"
-                android:textSize="20sp"
-                android:layout_marginTop="8dp"/>
-        </LinearLayout>
+                android:text="Nhớ lựa chọn của tôi"
+                android:textSize="20sp"/>
+        </RadioGroup>
     </LinearLayout>
 
-    <RadioGroup
-        android:id="@+id/radio_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp">
-
-        <RadioButton
-            android:id="@+id/radio_remember"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nhớ lựa chọn của tôi"
-            android:textSize="20sp"/>
-    </RadioGroup>
 
 </LinearLayout>
