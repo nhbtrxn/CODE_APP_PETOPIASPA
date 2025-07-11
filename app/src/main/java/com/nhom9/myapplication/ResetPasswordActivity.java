@@ -112,7 +112,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
         Map<String, String> body = new HashMap<>();
-        body.put("email", email);  // ✅ Sửa key ở đây
+        body.put("email", email);
 
         apiService.sendOtp(body).enqueue(new Callback<ResponseBody>() {
             @Override
@@ -140,7 +140,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
 
     private void confirmResetPassword() {
-        String email = binding.edtUsername.getText().toString().trim();  // ✅ Đổi tên rõ ràng
+        String email = binding.edtUsername.getText().toString().trim();
         String newPassword = binding.edtNewPassword.getText().toString().trim();
         String otp = binding.edtOTP.getText().toString().trim();
 
@@ -151,7 +151,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
         Map<String, String> body = new HashMap<>();
-        body.put("email", email);            // ✅ Key mới
+        body.put("email", email);
         body.put("newPassword", newPassword);
         body.put("otp", otp);
 

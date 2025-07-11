@@ -29,6 +29,16 @@ public class ContactActivity extends AppCompatActivity {
         binding= ActivityContactBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
+        // Xử lý khi nhấn vào nút Gửi tin nhắn
+        binding.imvIntroduction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ContactActivity.this, IntroductionActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // Xử lý khi nhấn vào nút Gửi tin nhắn
         binding.imvMessage.setOnClickListener(view -> {
             Intent intent = new Intent(ContactActivity.this, SendMessageActivity.class);

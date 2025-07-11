@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:paddingEnd="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="7dp"
+        android:background="@drawable/border_e3ccbd_ffffff">
+        <ImageView
+            android:id="@+id/imvPetPhoto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/sugo_dog"/>
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:background="@drawable/background_e3ccbd_paw"
+            android:gravity="center"
+            android:layout_marginStart="3dp">
+
+            <TextView
+                android:id="@+id/txtPetName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sú Gơ"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPetAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_b68d5f"
+                android:text="7 tuổi"
+                android:textSize="12sp"
+                android:textColor="#ffffff"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:layout_marginTop="3dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
