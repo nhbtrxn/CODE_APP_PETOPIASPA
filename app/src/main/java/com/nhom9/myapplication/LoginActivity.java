@@ -102,10 +102,10 @@ public class LoginActivity extends AppCompatActivity {
                             String username = userJson.optString("username", "");
                             String phone = userJson.optString("phone", "");
 
-                            // Nếu không có username thì dùng phone để hiển thị
+                            // Dùng phone khi không có username
                             String displayName = !username.isEmpty() ? username : phone;
 
-                            // Lưu thông tin vào SharedPreferences nếu có
+                            // Lưu thông tin vào SharedPreferences
                             if (!displayName.isEmpty()) {
                                 SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -134,14 +134,14 @@ public class LoginActivity extends AppCompatActivity {
 
                     } catch (Exception e) {
                         Log.e("LOGIN_ERROR", "Lỗi xử lý JSON", e);
-                        Toast.makeText(LoginActivity.this, "Lỗi khi xử lý phản hồi!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
                     }
                 }
 
                 @Override
                 public void onFailure(Call<ResponseBody> call, Throwable t) {
-                    Log.e("LOGIN_FAILURE", "Lỗi kết nối server", t);
-                    Toast.makeText(LoginActivity.this, "Không thể kết nối tới máy chủ!", Toast.LENGTH_SHORT).show();
+                    Log.e("LOGIN_FAILURE", "Lỗi kết nối", t);
+                    Toast.makeText(LoginActivity.this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
                 }
             });
         });

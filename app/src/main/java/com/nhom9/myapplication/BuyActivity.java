@@ -1,5 +1,6 @@
 package com.nhom9.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -42,5 +43,24 @@ public class BuyActivity extends AppCompatActivity {
             binding.btnService.setSelected(false);
             binding.btnProduct.setSelected(true);
         });
+
+        binding.bottomNavigation.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+
+            if (id == R.id.nav_main) {
+                // Xử lý trang MainActivity
+                Intent intent = new Intent(BuyActivity.this, MainActivity.class);
+                startActivity(intent);
+                return true;
+            } else if (id == R.id.nav_me) {
+                // Xử lý trang MeActivity
+                Intent intent = new Intent(BuyActivity.this, MeActivity.class);
+                startActivity(intent);
+                return true;
+            }
+
+            return false;
+        });
+
     }
 }

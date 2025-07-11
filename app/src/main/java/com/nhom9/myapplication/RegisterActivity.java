@@ -95,7 +95,6 @@ public class RegisterActivity extends AppCompatActivity {
                             // Lấy đối tượng user từ response
                             User user = response.body();
 
-                            // Ưu tiên username, nếu trống thì dùng phone
                             String username = user.getUsername();
                             if (username == null || username.isEmpty()) {
                                 username = user.getPhone();
