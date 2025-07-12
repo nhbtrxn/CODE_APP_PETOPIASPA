@@ -178,7 +178,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="PETOPIA SPA mang đến các dịch vụ grooming, spa thú giãn và chăm sóc sức khỏe toàn diện cho thú cưng, giúp các bé luôn sạch sẽ, khỏe mạnh và hạnh phúc."
+                android:text="PETOPIA SPA mang đến các dịch vụ grooming, spa thư giãn và chăm sóc sức khỏe toàn diện cho thú cưng, giúp các bé luôn sạch sẽ, khỏe mạnh và hạnh phúc."
                 android:textSize="14sp"
                 android:textColor="#B68D5F" />
         </androidx.cardview.widget.CardView>
