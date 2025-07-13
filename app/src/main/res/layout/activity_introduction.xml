@@ -92,7 +92,7 @@
                     android:id="@+id/txtPetopiaSubtitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nơi yêu thương bắt đầu từ sự chăm sóc!"
+                    android:text="Nơi yêu thương bắt đầu từ việc chăm sóc!"
                     android:textStyle="italic"
                     android:textSize="16sp"
                     android:textColor="#502D1C"

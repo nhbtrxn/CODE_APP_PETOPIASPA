@@ -79,11 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
             return false;
         });
-//        // Gắn tab indicator
-//        new TabLayoutMediator(binding.tabIndicator, binding.viewPager,
-//                (tab, position) -> {
-//                }
-//        ).attach();
+
         TextView tvUsernameGreeting = findViewById(R.id.tvUsernameGreeting);
         String username = getIntent().getStringExtra("username");
         if (username != null && !username.isEmpty()) {
@@ -91,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             tvUsernameGreeting.setVisibility(View.GONE); // Ẩn nếu không có username
         }
-
 
     }
 }

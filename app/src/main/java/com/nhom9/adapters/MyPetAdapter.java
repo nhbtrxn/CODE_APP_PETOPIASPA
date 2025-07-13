@@ -21,18 +21,12 @@ public class MyPetAdapter extends RecyclerView.Adapter<MyPetAdapter.ViewHolder> 
     ArrayList<MyPet> pets;
 
     //constructor
-
-
     public MyPetAdapter(Context context, int pet_layout, ArrayList<MyPet> pets) {
         this.context = context;
         this.pet_layout = pet_layout;
         this.pets = pets;
     }
 
-//    public MyPetAdapter(Context context, ArrayList<MyPet> pets) {
-//        this.context = context;
-//        this.pets = pets;
-//    }
 
     @NonNull
     @Override
