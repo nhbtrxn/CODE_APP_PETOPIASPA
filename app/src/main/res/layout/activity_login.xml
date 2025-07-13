@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,7 +16,7 @@
         android:layout_height="96dp"
         android:contentDescription="Petopia Spa logo with dog outline in circle, brown and beige tones"
         android:src="@drawable/light_logo"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -29,7 +30,7 @@
         android:textSize="24sp"
         android:textColor="#4B2B1D"
         android:textStyle="bold"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintTop_toBottomOf="@id/logoImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -45,7 +46,7 @@
         android:hint="Email/Số điện thoại"
         android:padding="12dp"
         android:textColorHint="#BFAEA1"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:textColor="#000000"
         app:layout_constraintTop_toBottomOf="@id/titleLogin"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +79,7 @@
         android:inputType="textPassword"
         android:padding="12dp"
         android:textColorHint="#BFAEA1"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:textColor="#000000"
         app:layout_constraintTop_toBottomOf="@id/emailPhoneInput"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +110,7 @@
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:elevation="4dp"
         android:backgroundTint="@null"
         android:background="@drawable/border_4f2b1a_4f2b1a"
@@ -124,7 +125,7 @@
         android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginStart="16dp"
         android:text="Quên mật khẩu?"
         android:textColor="#2B65F6"
@@ -195,7 +196,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintTop_toBottomOf="@id/btnGoogleLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -229,15 +230,15 @@
     <!-- Footer section -->
     <LinearLayout
         android:id="@+id/footer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="32dp"
-        android:paddingBottom="20dp"
+        android:layout_width="404dp"
+        android:layout_height="150dp"
         android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/followUsLabel"
@@ -245,62 +246,64 @@
             android:layout_height="wrap_content"
             android:text="THEO DÕI CHÚNG TÔI:"
             android:textColor="#4B2B1D"
-            android:textStyle="bold"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/facebookIcon"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
+                android:layout_marginEnd="16dp"
                 android:contentDescription="Facebook icon, brown square background with white 'f'"
-                android:src="@drawable/login_facebook"
-                android:layout_marginEnd="16dp" />
+                android:src="@drawable/login_facebook" />
 
             <ImageView
                 android:id="@+id/instagramIcon"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
+                android:layout_marginEnd="0dp"
                 android:contentDescription="Instagram icon, brown square background with white camera"
-                android:src="@drawable/login_instagram"
-            android:layout_marginEnd="0dp" />
+                android:src="@drawable/login_instagram" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/websiteText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Hoặc truy cập website của Petopia Spa "
                 android:textColor="#4B2B1D"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/websiteLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="tại đây"
                 android:textColor="#2B65F6"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp" />
+                android:textSize="14sp" />
         </LinearLayout>
+
         <TextView
             android:id="@+id/privacyPolicy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Chính sách quyền riêng tư"
             android:textColor="#4B2B1D"
-            android:textSize="14sp"
-            android:layout_marginTop="8dp"/>
+            android:textSize="14sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

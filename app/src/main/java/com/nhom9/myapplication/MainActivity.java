@@ -36,24 +36,28 @@ public class MainActivity extends AppCompatActivity {
         // Xử lý khi nhấn vào nút Chính sách
         binding.btnPolicy.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, PolicyActivity.class);
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             startActivity(intent);
         });
 
         // Xử lý khi nhấn vào nút Liên hệ
         binding.btnContact.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, ContactActivity.class);
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             startActivity(intent);
         });
 
         // Xử lý khi nhấn vào nút hỏi đáp
         binding.btnAsking.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, QaAActivity.class);
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             startActivity(intent);
         });
         // Xử lý khi nhấn vào nút mua sắm
 
         binding.btnShopping.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, BuyActivity.class);
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             startActivity(intent);
         });
         //

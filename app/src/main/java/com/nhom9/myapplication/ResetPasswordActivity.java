@@ -38,6 +38,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
         binding.btnBack.setOnClickListener(v -> {
             Intent intent = new Intent(ResetPasswordActivity.this, LoginActivity.class);
             startActivity(intent);
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             finish(); // Đóng ResetPasswordActivity để không quay lại được bằng nút Back
         });
 
@@ -161,6 +162,8 @@ public class ResetPasswordActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     Toast.makeText(ResetPasswordActivity.this, "Đổi mật khẩu thành công!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(ResetPasswordActivity.this, LoginActivity.class));
+                    overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+
                     finish();
                 } else {
                     Toast.makeText(ResetPasswordActivity.this, "Mã xác nhận sai hoặc hết hạn!", Toast.LENGTH_SHORT).show();
