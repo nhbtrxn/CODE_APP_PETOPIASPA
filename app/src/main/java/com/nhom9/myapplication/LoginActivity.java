@@ -35,11 +35,14 @@ public class LoginActivity extends AppCompatActivity {
         // Chuyển sang trang đăng ký
         binding.linkRegister.setOnClickListener(v -> {
             startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+
         });
 
         // Chuyển sang trang quên mật khẩu
         binding.forgotPassword.setOnClickListener(v -> {
             startActivity(new Intent(LoginActivity.this, ResetPasswordActivity.class));
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
         });
 
         // Ẩn lỗi ban đầu
@@ -118,6 +121,7 @@ public class LoginActivity extends AppCompatActivity {
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             intent.putExtra("username", displayName);
                             startActivity(intent);
+                            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                             finish();
                         } else {
                             // Hiển thị lỗi cụ thể

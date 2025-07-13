@@ -33,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
         binding.tvLogin.setOnClickListener(v -> {
             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
             startActivity(intent);
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             finish();
         });
 
@@ -111,6 +112,8 @@ public class RegisterActivity extends AppCompatActivity {
                             Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                             intent.putExtra("username", username);
                             startActivity(intent);
+                            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+
                             finish();
                         } else {
                             Toast.makeText(RegisterActivity.this, "Đăng ký thất bại: " + response.code(), Toast.LENGTH_SHORT).show();
