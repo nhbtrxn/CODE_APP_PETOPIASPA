@@ -62,24 +62,11 @@ public class ContactActivity extends AppCompatActivity {
 
 
             View phoneOption = dialogView.findViewById(R.id.phoneOption);
-//            View zaloOp = dialogView.findViewById(R.id.zaloOption);
-//            View zoomOption = dialogView.findViewById(R.id.zoomOption);
-
-//            // Xử lý khi nhấn từng nút
-//            zaloOp.setOnClickListener(v -> {
-//                openZaloCall();
-//                dialog.dismiss();
-//            });
 
             phoneOption.setOnClickListener(v -> {
                 makePhoneCall();
                 dialog.dismiss();
             });
-
-//            zoomOption.setOnClickListener(v -> {
-//                openZoomCall();
-//                dialog.dismiss();
-//            });
 
 
             dialog.show();

@@ -39,7 +39,7 @@ public class MeActivity extends AppCompatActivity {
             // Nếu đã đăng nhập thì chuyển sang Me_SignedActivity
             Intent intent = new Intent(MeActivity.this, Me_SignedActivity.class);
             startActivity(intent);
-            finish(); // Đóng MeActivity luôn
+            finish();
             return;
         }
 

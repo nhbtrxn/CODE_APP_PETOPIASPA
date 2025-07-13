@@ -21,7 +21,7 @@ public class FAQActivity extends AppCompatActivity {
 
         // Bấm nút quay lại
         binding.imvBack.setOnClickListener(v -> {
-            finish(); // Đóng activity hiện tại
+            finish();
         });
 
         // Set click listeners for each question
